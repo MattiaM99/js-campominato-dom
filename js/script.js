@@ -22,20 +22,29 @@ function start(){
   function generatePlayGround(){
     const griglia = document.createElement('div');
     griglia.className = 'griglia';
-    for (let i = 0; i < numeroCelle; i++) {
+    for (let i = 1; i < numeroCelle + 1 ; i++) {
       const cella = document.createElement('div');
       cella.className = 'cella';        
       cella.innerHTML = `<span>${i}</span>`;                
       const cellSize = `calc(100% / ${cellsPerRow})`;   
       cella.style.width = cellSize;
       cella.style.height = cellSize;
-      cella.addEventListener('click',function(){
-        console.log(this);
-        this.classList.add('clicked');
+      cella.addEventListener('click',function(event){
+        //memorizzare il valore dentro la cella
+        //usare il valore trovato per fare un confronto
+        //bombs.includes(event.target.innerText)
+        if (bombs.includes(parseInt(event.target.innerText))) {
+              
+        lost = true;
+        console.log('hai preso una bomba');
+        return this.classList.add('bomb', 'clicked');
+
+        }else {
+        console.log('continua');
+        return this.classList.add('clicked');
+        }       
       })
-
       griglia.append(cella);
-
     }
 
     document.querySelector('main').append(griglia);
