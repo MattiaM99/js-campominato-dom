@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  height: 100px;
+}
+
+#start{
+  padding: 5px 10px;
+}
+
+#select{
+  padding: 5px 10px;
+}
+
+main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7EFED5;
+}
+
+footer{
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px;
+}
+
+.credit{
+  margin-left: 100px;
+}
+
+.none{
+  display: none;
+}
+
+.block{
+  display: block;
+  background: #000;
+}
+
+.easy{
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+}
+
+.hard{
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+}
+
+.crazy{
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+}
+
+.griglia{
+  width: 500px;
+  height: 500px;
+}
+
+.cella{
+  float: left;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.cella.clicked{
+  background-color: teal;
+}
